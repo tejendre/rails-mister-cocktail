@@ -7,18 +7,16 @@
 <div class="col-xs-12 col-sm-6">
     <div class="show_cocktail">
       <h1>More Information about <%= @cocktail.name %> </h1>
-      <%= link_to "Back", cocktails_path %>
-      <%= link_to "Add a new Dose", new_cocktail_dose_path(@cocktail)  %>
+      <%= link_to "Back",  cocktails_path, class: "btn btn-primary" %>
+      <%= link_to "Add a new Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success"  %>
       <% @cocktail.doses.each do |dose| %>
       <p><%= dose.description  %> - <%= dose.ingredient.name %></p>
-      <%= link_to "Delete", dose_path(dose), method: :delete  %>
+      <%= link_to "Delete", dose_path(dose),class: "btn btn-danger", method: :delete  %>
       <% end %>
     </div>
   </div>
 <div class="col-xs-12 col-sm-6">
 
-    <div class = show_drink>
-<h1>show the text</h1>
     </div>
 </div>
 </div>
