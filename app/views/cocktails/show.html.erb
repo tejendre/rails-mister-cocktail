@@ -2,9 +2,9 @@
   <h1>Let's enjoy Life!!!</h1>
 </div>
 
-
-<div>
-
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
     <div class="show_cocktail">
       <h1>More Information about <%= @cocktail.name %> </h1>
       <%= link_to "Back", cocktails_path %>
@@ -14,9 +14,12 @@
       <%= link_to "Delete", dose_path(dose), method: :delete  %>
       <% end %>
     </div>
+  </div>
+<div class="col-xs-12 col-sm-6">
 
     <div class = show_drink>
 <h1>show the text</h1>
     </div>
-
+</div>
+</div>
 </div>
