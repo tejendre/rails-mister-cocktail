@@ -1,0 +1,25 @@
+<div class="">
+  <div class="home_banner">
+    <h1>Cocktail Party🥂</h1>
+    <p>Learn more about cocktails to have a Good time!</p>
+  </div>
+
+
+  <div class = "container-fluid">
+    <div class="row justify-content-center py-5">
+      <h1>View our Cocktails</h1>
+    </div>
+    <div class = "row">
+        <% @cocktails.each_with_index do |cocktail, i| %>
+<div class="col-xs-12 col-sm-4">
+          <div class ="card-trip" style="background-image: url('<%= image_path "cards/card1.png" %>')">
+          <h3><%=link_to cocktail.name, cocktail_path(cocktail) %></h3>
+          </div>
+
+</div>
+        <% end %>
+      <h6><%=link_to "Create a new Cocktail", new_cocktail_path%></h6>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+
+<div class="global_navbar">
+  <h1>Let's enjoy Life!!!</h1>
+</div>
+
+
+
+<div class = new_dose >
+
+<h1>Create a new Dose</h1>
+
+<%= simple_form_for [ @cocktail, @dose ] do |f| %>
+<%= f.input :description %>
+<%= f.association :ingredient, collection: @ingredients %>
+<%= f.submit %>
+<% end %>
+
+
+</div>
